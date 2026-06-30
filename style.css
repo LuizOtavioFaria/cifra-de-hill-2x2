@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0b0f19; 
+    transition: background-image 0.5s ease-in-out;
+}
+
+.container {
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2.5rem;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+h2 {
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text; 
+    background-clip: text;         
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.85rem;
+}
+
+.grid-chave {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.input-chave {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 14px;
+    border-radius: 12px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Remove as setinhas da lateral do input number */
+.input-chave::-webkit-outer-spin-button,
+.input-chave::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-chave {
+    -moz-appearance: textfield; /* Mantém para compatibilidade com o Firefox antigo */
+    appearance: textfield;      /* Adiciona a propriedade padrão moderna */
+}
+
+.input-chave:focus, .input-texto:focus {
+    outline: none;
+    border-color: #00d2ff;
+    box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.label-secao {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+}
+
+.input-texto {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 14px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.input-texto::placeholder {
+    color: #64748b;
+}
+
+.grupo-botoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cifrar {
+    background: #00d2ff;
+    color: #0b0f19;
+    box-shadow: 0 4px 14px rgba(0, 210, 255, 0.3);
+}
+
+.btn-cifrar:hover {
+    background: #33e0ff;
+    transform: translateY(-1px);
+}
+
+.btn-decifrar {
+    background: transparent;
+    color: #00d2ff;
+    border: 2px solid rgba(0, 210, 255, 0.4);
+}
+
+.btn-decifrar:hover {
+    background: rgba(0, 210, 255, 0.08);
+    border-color: #00d2ff;
+    transform: translateY(-1px);
+}
+
+.resultado-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+    min-height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resultado-texto {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #00d2ff;
+    word-break: break-all;
+    margin-top: 6px;
+    letter-spacing: 1px;
+}

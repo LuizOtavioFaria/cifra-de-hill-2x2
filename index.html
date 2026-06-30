@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de Hill 2x2</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cifra de Hill 2x2</h2>
+
+        <span class="label-secao">Matriz Chave (2x2)</span>
+        <div class="grid-chave">
+            <input type="number" id="k00" class="input-chave" value="3">
+            <input type="number" id="k01" class="input-chave" value="3">
+            <input type="number" id="k10" class="input-chave" value="2">
+            <input type="number" id="k11" class="input-chave" value="5">
+        </div>
+
+        <label class="label-secao" for="texto">Mensagem</label>
+        <input type="text" id="texto" class="input-texto" placeholder="Digite sua mensagem aqui..." autocomplete="off">
+
+        <div class="grupo-botoes">
+            <button class="btn-cifrar" onclick="processar(true)">Cifrar</button>
+            <button class="btn-decifrar" onclick="processar(false)">Decifrar</button>
+        </div>
+
+        <div class="resultado-box">
+            <span class="label-secao" style="margin-bottom: 0;">Resultado:</span>
+            <div id="resultado" class="resultado-texto">-</div>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
