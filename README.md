@@ -1,39 +1,44 @@
-# 🔐 Cifra de Hill 2x2 — Criptografia e Álgebra Linear
+# 🔐 Cifra de Hill 2x2
 
-Uma aplicação web interativa e minimalista que implementa a **Cifra de Hill 2x2**, demonstrando na prática conceitos fundamentais de Álgebra Linear, Teoria dos Números e criptografia simétrica clássica.
-
----
-
-## 🚀 Sobre o Projeto
-
-O objetivo deste projeto é tirar a matemática abstrata da sala de aula e trazê-la para o mundo real do desenvolvimento de software. A aplicação permite cifrar e decifrar blocos de texto (bigramas) utilizando uma matriz chave de tamanho $2 \times 2$ sobre o alfabeto latino modular ($\mathbb{Z}_{26}$).
-
-O projeto conta com um design moderno em **Dark Glassmorphism**, interface responsiva, alinhamento simétrico e planos de fundo dinâmicos que mudam de forma rotativa a cada carregamento da página.
+Uma aplicação web interativa e minimalista que transforma conceitos abstratos de **Álgebra Linear** e **Criptografia** em uma ferramenta prática de segurança.
 
 ---
 
-## 🧠 Conceitos Matemáticos Aplicados
+## ✨ Funcionalidades Principais
 
-Para que o sistema funcione com precisão científica, foram implementados os seguintes pilares algébricos:
-
-*   **Multiplicação de Matrizes:** O texto é dividido em vetores de tamanho 2 e multiplicado linearmente pela matriz chave escolhida.
-*   **Determinante e Matriz Adjunta:** Utilizados no cálculo da matriz inversa para possibilitar a operação de decifragem.
-*   **Algoritmo de Euclides (MDC):** Validação em tempo real para garantir que o determinante da matriz chave seja coprimo com 26 ($\text{mdc}(\text{det}, 26) = 1$), pré-requisito obrigatório para a existência do inverso modular.
-*   **Módulo Matemático Verdadeiro:** Correção da aritmética de números negativos gerados pela matriz adjunta, substituindo o comportamento padrão do operador `%` do JavaScript por uma função pura de módulo cíclico.
+*   **Cifragem e Decifragem Automática:** O sistema atualiza o campo de texto sozinho após cifrar, permitindo descriptografar com um único clique.
+*   **Tratamento de Texto Inteligente:** Remove caracteres especiais, padroniza para maiúsculas e adiciona preenchimento para blocos pares (`bigramas`).
+*   **Segurança com Validação Algorítmica:** Impede o uso de chaves inválidas calculando o MDC em tempo real.
+*   **Interface Fluida:** Design moderno com efeito Glassmorphism e planos de fundo dinâmicos que mudam a cada acesso.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-*   **HTML5:** Estrutura semântica da aplicação.
-*   **CSS3:** Estilização avançada com variáveis, Grid Layout, Flexbox e efeitos de desfoque (`backdrop-filter`).
-*   **JavaScript (ES6+):** Lógica matemática modular, manipulação de strings (Regex/ASCII) e controle do background randômico.
+*   **HTML5** — Estrutura semântica do app.
+*   **CSS3** — Grid Layout, Flexbox e efeitos visuais translúcidos (`backdrop-filter`).
+*   **JavaScript (ES6+)** — Manipulação de strings, lógica de matrizes e automação da interface.
 
 ---
 
-## 📂 Estrutura de Arquivos
+## 🧠 Desafios Matemáticos Resolvidos
 
-```text
-├── index.html   # Estrutura e marcação da página
-├── style.css    # Identidade visual escura e estilização responsiva
-└── script.js    # Funções algébricas e automação da interface
+1.  **Módulo Matemático Verdadeiro:** O operador `%` padrão do JavaScript falha com números negativos (ex: `-3 % 26` resulta em `-3`). Foi implementada uma função cíclica pura para garantir o retorno positivo correto (`23`), crucial para a decifragem.
+2.  **Inversão de Matrizes:** Implementação real da estrutura da Matriz Adjunta multiplicada pelo Inverso Modular do Determinante.
+3.  **Algoritmo de Euclides:** Validação exata para checar se $\text{mdc}(\text{det}, 26) = 1$, critério obrigatório para a existência da chave inversa.
+
+---
+
+## 📂 Estrutura do Projeto
+
+*   `index.html` — Interface e inputs da aplicação.
+*   `style.css` — Estilização moderna e responsiva.
+*   `script.js` — Core matemático da Cifra de Hill e controle de UI.
+
+---
+
+## 🚀 Como Testar
+
+O projeto está hospedado e rodando diretamente no **GitHub Pages**! 
+
+🔗 **[Acesse o sistema clicando aqui](https://luizotaviofaria.github.io/cifra-de-hill-2x2/)**
